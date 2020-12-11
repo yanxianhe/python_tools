@@ -57,6 +57,6 @@ if __name__ == '__main__':
 
     GetLogging().get()
     # 当前win10 系统若Linux 系统需要调整一下
-    directory = "E:\PRO5-20201210\DCIM"
+    directory = "E:\\PRO5-20201210\\DCIM"
     print("查询目录 : %s" % directory)
     duplicate_files(directory)
