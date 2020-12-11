@@ -22,6 +22,7 @@ python tools
     pip3 install geoip2==3.0.0
     pip3 install python-geoip-geolite2==2015.303
     ~~~~~
-
+### duplicate_files.py
+* 根据指定目录查询重复文件
 
  
