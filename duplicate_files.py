@@ -6,6 +6,8 @@
 '''
 import os
 import hashlib
+from syslogs import GetLogging
+from loguru import logger
 
 # 查看MD5值
 def md5sum(filename):
@@ -36,14 +38,14 @@ def duplicate_files(filedir):
             md5 = md5sum(tlie)
             if md5 in all_md5.values():
                 key_path = list(all_md5.keys())[list(all_md5.values()).index(md5)]
-                print("已经文件      %s ====== %s" % (key_path,md5))
-                print("重复文件      %s ====== %s" % (tlie,md5))
+                logger.info("重复文件 \t\n %s \t\n %s \t\n %s" % (key_path,tlie,md5))
                 # os.remove(tlie)
                 pass
             else:
                 all_md5[tlie] = md5
 if __name__ == '__main__':
 
+    GetLogging().get()
     # 当前win10 系统若Linux 系统需要调整一下
     directory = "E:\\PRO5-20201210"
     print("查询目录 : %s" % directory)

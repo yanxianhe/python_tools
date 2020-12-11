@@ -24,5 +24,20 @@ python tools
     ~~~~~
 ### duplicate_files.py
 * 根据指定目录查询重复文件
+* 需要安装 pip 
+~~~~~
+pip3 install loguru==0.5.3
+~~~~~
 
- 
+* 1、添加日志框架将对比文件打印到日志文件中
+* 
+
+### syslogs.py
+* 添加日志框架 
+* syslogs.py 在(yanxianhe/scrapy](https://github.com/yanxianhe/scrapy) 已经使用
+
+* 需要安装 pip 
+~~~~~
+pip3 install loguru==0.5.3
+~~~~~
+
