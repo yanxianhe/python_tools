@@ -38,8 +38,18 @@ def duplicate_files(filedir):
             md5 = md5sum(tlie)
             if md5 in all_md5.values():
                 key_path = list(all_md5.keys())[list(all_md5.values()).index(md5)]
-                logger.info("重复文件 \t\n %s \t\n %s \t\n %s" % (key_path,tlie,md5))
-                # os.remove(tlie)
+                logger.debug("重复文件 \t %s \t\n%s \t\n%s" % (md5,key_path,tlie))
+                ## 删除文件名较长的文件当前将删除 屏蔽了
+                if(len(key_path) < len(tlie)):
+                    #os.remove(tlie)
+                    if(tlie in all_md5) :
+                        del all_md5[tlie]
+                    logger.info("需要手动删除文件 \t %s " % (tlie))
+                else :
+                    #os.remove(key_path)
+                    if(key_path in all_md5) :
+                        del all_md5[key_path]
+                    logger.info("需要手动删除文件 \t %s " % (key_path))
                 pass
             else:
                 all_md5[tlie] = md5
@@ -47,6 +57,6 @@ if __name__ == '__main__':
 
     GetLogging().get()
     # 当前win10 系统若Linux 系统需要调整一下
-    directory = "E:\\PRO5-20201210"
+    directory = "E:\PRO5-20201210\DCIM"
     print("查询目录 : %s" % directory)
     duplicate_files(directory)
