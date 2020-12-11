@@ -34,7 +34,7 @@ pip3 install loguru==0.5.3
 
 ### syslogs.py
 * 添加日志框架 
-* syslogs.py 在(yanxianhe/scrapy](https://github.com/yanxianhe/scrapy) 已经使用
+* syslogs.py 在[yanxianhe/scrapy](https://github.com/yanxianhe/scrapy) 已经使用
 
 * 需要安装 pip 
 ~~~~~
