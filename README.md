@@ -41,3 +41,6 @@ pip3 install loguru==0.5.3
 pip3 install loguru==0.5.3
 ~~~~~
 
+
+### pycry_tools.py
+* 添加 AES DES 加密/解密
